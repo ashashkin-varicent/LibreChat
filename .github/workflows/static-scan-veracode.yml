@@ -18,6 +18,9 @@ jobs:
         with:
           submodules: true
 
+      - name: Install packages
+        run: npm ci
+
       - name: Zip entire project for Veracode
         run: 7z a LibreChat.zip . '-xr!.git'
 
